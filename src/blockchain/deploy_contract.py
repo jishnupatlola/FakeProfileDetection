@@ -1,5 +1,8 @@
 from web3 import Web3
-from solcx import compile_standard
+from solcx import compile_standard, install_solc
+
+# Install specific Solidity compiler version
+install_solc('0.8.0')
 
 # Solidity source code
 with open('src/blockchain/contracts/FakeProfileVerification.sol', 'r') as file:
@@ -20,7 +23,7 @@ compiled_sol = compile_standard({
             }
         }
     }
-})
+}, solc_version='0.8.0')
 
 # Connect to local Ethereum node
 w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
