@@ -1,0 +1,13 @@
+beautifulsoup4
+requests
+pandas
+numpy
+scikit-learn
+tensorflow
+nltk
+spacy
+networkx
+web3
+solidity
+flask
+flask-restful
